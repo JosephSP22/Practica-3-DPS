@@ -46,6 +46,7 @@ export const Header = ({
                             {allProducts.map((product => (
                                 <div className="cart-product" key={product.id}>
                                     <div className="info-cart-product">
+                                        <img src={product.urlImage} alt={product.title} className="img-product"/>
                                         <span className="cantidad-producto-carrito">{product.quantity}</span>
                                         <p className="titulo-producto-carrito">{product.title}</p>
                                         <span className="precio-producto-carrito">${product.price}</span>
@@ -54,18 +55,6 @@ export const Header = ({
                                 </div>
                             )))}
                         </div>
-                            {/* {allProducts.map((product, index) => (
-                                <div className="row-product" key={index}>
-                                    <div className="cart-product">
-                                        <div className="info-cart-product">
-                                            <span className="cantidad-producto-carrito">{product.quantity}</span>
-                                            <p className="titulo-producto-carrito">{product.name}</p>
-                                            <span className="precio-producto-carrito">${product.price}</span>
-                                        </div>
-                                        <button onClick={() => onDeleteProduct(product)}>Eliminar</button>
-                                    </div>
-                                </div>
-                            ))} */}
                             <div className="cart-total">
                                 <h3>Total:</h3>
                                 <span className="total-pagar">${total}</span>
